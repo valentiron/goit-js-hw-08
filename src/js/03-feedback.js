@@ -41,14 +41,19 @@ const refs = {
      
      refs.input.value = getLSValues.email
      refs.textarea.value = getLSValues.message
+
+     newLSValues.email =  getLSValues.email
+     newLSValues.message = getLSValues.message
   
   
-  
+
   }
   
   function onSubmit(event){
 
     event.preventDefault()
+    
+    console.log(newLSValues)
     
     localStorage.removeItem('feedback-form-state')
     
